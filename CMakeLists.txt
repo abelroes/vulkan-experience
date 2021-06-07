@@ -14,6 +14,8 @@ find_package(GLFW REQUIRED)
 find_package(glm REQUIRED)
 
 add_executable(vulkan-test "src/main.cpp")
+add_library(imgui "libs/imguiInclude.h")
+add_library(imgui ALIAS imgui)
 
 target_link_libraries(
     vulkan-test PRIVATE
